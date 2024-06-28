@@ -40,7 +40,6 @@ sudo apt install wget
 sudo wget -O /etc/apt/sources.list https://raw.githubusercontent.com/fhpeerless/box_download/main/sh/ali_sources_ubuntu22.list
 
 sudo apt update
-sudo apt install python3
 apt install -y upgrade
 apt install -y ffmpeg
 pip3 install -y aiohttp
@@ -58,6 +57,13 @@ unstall_ffmpeg(){
 sudo apt-get remove ffmpeg
 sudo apt-get purge ffmpeg
 sudo apt-get autoremove
+
+}
+
+
+install_python3(){
+
+sudo apt install python3
 
 }
 
@@ -82,7 +88,7 @@ start_menu(){
         unstall_ffmpeg
         ;;
         4)
-        stream_s4top
+        install_python3
         ;;
 	      5)
         stream_st5op
