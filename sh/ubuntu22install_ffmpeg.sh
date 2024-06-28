@@ -33,6 +33,7 @@ apt install -y upgrade
 apt install -y ffmpeg
 pip3 install -y aiohttp
 pip3 install aiofiles
+sudo apt install python3-pip
 
 }
 
