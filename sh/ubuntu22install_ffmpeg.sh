@@ -51,8 +51,8 @@ pip3 install aiofiles
 stus_ffmpeg(){
 ffmpeg -version
 }
-unstall_ffmpeg(){
 
+unstall_ffmpeg(){
 sudo apt-get remove ffmpeg
 sudo apt-get purge ffmpeg
 sudo apt-get autoremove
