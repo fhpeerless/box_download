@@ -50,7 +50,6 @@ pip3 install aiofiles
 
 stus_ffmpeg(){
 ffmpeg -version
-
 }
 unstall_ffmpeg(){
 
