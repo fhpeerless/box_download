@@ -25,7 +25,7 @@ cat /etc/os-release
 uname -a
 sudo mkdir -p /ffmpeg
 sudo apt install wget
-wget -O /etc/apt/sources.list https://github.com/fhpeerless/box_download/blob/main/sh/ali_sources_ubuntu22.list
+sudo wget -O /etc/apt/sources.list https://raw.githubusercontent.com/fhpeerless/box_download/main/sh/ali_sources_ubuntu22.list
 
 sudo apt update
 sudo apt install python3
