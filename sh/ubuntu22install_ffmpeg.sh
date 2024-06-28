@@ -66,8 +66,7 @@ install_python3(){
 sudo apt install python3
 
 }
-uninstall_pipd
-{
+uninstall_pipd(){
    pip3 uninstall aiohttp
    pip3 uninstall aiofiles
 }
