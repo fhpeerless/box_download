@@ -23,9 +23,7 @@ cat /etc/os-release
 uname -a
 sudo mkdir -p /ffmpeg
 sudo apt install wget
-wget -O /etc/apt/sources.list https://raw.githubusercontent.com/fhpeerless/ffmpeg/main/ali_sources_ubuntu22.list?token=GHSAT0AAAAAACR4P62NR5NMHIU7FTUACX34ZT4RMQQ
-
-# 对已经安装的软件升级为最新版
+wget -O /etc/apt/sources.list https://github.com/fhpeerless/box_download/blob/main/sh/ali_sources_ubuntu22.list
 apt install -y upgrade
 apt install -y ffmpeg
 pip3 install -y aiohttp
