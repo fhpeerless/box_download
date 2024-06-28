@@ -74,6 +74,7 @@ echo -e "${red} 安装ffmpeg! ${font}"
 echo -e "${green} 1.安装FFmpeg ${font}"
 echo -e "${green} 2.查看FFmpeg安装状态${font}"
 echo -e "${green} 3.卸载ffmpeg${font}"
+echo -e "${green} 4.安装python3${font}"
 
 start_menu(){
     read -p "请输入数字(1-4),选择你要进行的操作:" num
@@ -90,7 +91,7 @@ start_menu(){
         4)
         install_python3
         ;;
-	      5)
+	5)
         stream_st5op
         ;;
         *)
