@@ -42,14 +42,14 @@ sudo wget -O /etc/apt/sources.list https://raw.githubusercontent.com/fhpeerless/
 sudo apt update
 apt install -y upgrade
 apt install -y ffmpeg
-pip3 install -y aiohttp
-pip3 install -y aiofiles
-sudo apt install python3-pip
+sudo apt install -y python3-pip
+pip3 install aiohttp
+pip3 install aiofiles
 
 }
 
 stus_ffmpeg(){
-ffmpeg -v
+ffmpeg -version
 
 }
 unstall_ffmpeg(){
@@ -57,7 +57,7 @@ unstall_ffmpeg(){
 sudo apt-get remove ffmpeg
 sudo apt-get purge ffmpeg
 sudo apt-get autoremove
-
+sudo apt remove python3-pip
 }
 
 
@@ -66,7 +66,11 @@ install_python3(){
 sudo apt install python3
 
 }
-
+uninstall_pipd
+{
+   pip3 uninstall aiohttp
+   pip3 uninstall aiofiles
+}
 
 # 开始菜单设置
 echo -e "${yellow}一键安装ffmpeg。系统ubuntu22.04推流${font}"
@@ -75,6 +79,7 @@ echo -e "${green} 1.安装FFmpeg ${font}"
 echo -e "${green} 2.查看FFmpeg安装状态${font}"
 echo -e "${green} 3.卸载ffmpeg${font}"
 echo -e "${green} 4.安装python3${font}"
+echo -e "${green} 5.卸载python3的各个依赖${font}"
 
 start_menu(){
     read -p "请输入数字(1-4),选择你要进行的操作:" num
@@ -92,7 +97,7 @@ start_menu(){
         install_python3
         ;;
 	5)
-        stream_st5op
+        uninstall_pipd
         ;;
         *)
         echo -e "${red} 请输入正确的数字 (1-5) ${font}"
