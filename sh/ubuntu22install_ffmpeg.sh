@@ -27,7 +27,7 @@ if [[ $PYTHON_VERSION == Python\ 3* ]]; then
 else
     echo "Python 3 is not installed."
     # 退出脚本
-exit 0
+    exit 0
 fi
 
 
