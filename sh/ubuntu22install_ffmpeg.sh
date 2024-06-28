@@ -5,7 +5,7 @@ export PATH
 
 #sudo mkdir -p /ffmpeg && sudo wget -N --no-check-certificate -O /ffmpeg/install_ffmpeg.sh https://raw.githubusercontent.com/fhpeerless/7X24onlinevideo/main/ffmpeg/install_ffmpeg.sh && wget -c http://www.ffmpeg.org/releases/ffmpeg-7.0 -P /ffempg && tar -zxvf /ffempg/ffmpeg-7.0.tar.gz -C /ffempg && sudo chmod -R 777 /ffmpeg && sudo bash /ffmpeg/install_ffmpeg.sh
 #=================================================================#
-#   System Required: CentOS7.6&ubuntu X86_64                               #
+#   System Required: ubuntu X86_64                               #
 #   Description: FFmpeg Stream Media Server                       #
 #   Author: 风之轻鸿                                            #
 #   wx公众号: ashagw                                           #
@@ -19,6 +19,18 @@ font="\033[0m"
 
 ffmpeg_install(){
 # 版本查看
+# 尝试获取Python 3的版本
+PYTHON_VERSION=$(python3 --version 2>&1)
+# 检查命令是否成功执行
+if [[ $PYTHON_VERSION == Python\ 3* ]]; then
+    echo "Python 3 is installed. Version: $PYTHON_VERSION"
+else
+    echo "Python 3 is not installed."
+    # 退出脚本
+exit 0
+fi
+
+
 sudo apt update
 
 cat /etc/os-release
@@ -32,7 +44,7 @@ sudo apt install python3
 apt install -y upgrade
 apt install -y ffmpeg
 pip3 install -y aiohttp
-pip3 install aiofiles
+pip3 install -y aiofiles
 sudo apt install python3-pip
 
 }
