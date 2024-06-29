@@ -38,7 +38,7 @@ uname -a
 sudo mkdir -p /ffmpeg
 sudo apt install wget
 sudo wget -O /etc/apt/sources.list https://raw.githubusercontent.com/fhpeerless/box_download/main/sh/ali_sources_ubuntu22.list
-sudo wget -O /ffmpeg/source_video.txt https://github.com/fhpeerless/box_download/blob/main/txt/source_video.txt
+sudo wget -O /ffmpeg/source_video.txt https://raw.githubusercontent.com/fhpeerless/box_download/main/txt/source_video.txt
 
 sudo apt update
 apt install -y upgrade
